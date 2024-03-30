@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 3 - Quiz</title>
+
+</head>
+
+<body>
+
+    <!-- container for the content -->
+    <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh">
+        <div>
+            <!-- website heading -->
+            <h1 class="text-center">Quiz</h1>
+            <!-- container for authentication and users name -->
+            <div class="box text-success border rounded shadow p-5  bg-light">
+                <div id="authenticateUserForm">
+                    <input type="text" class="form-control input-lg" id="username" placeholder="username"  autocomplete="off" required> <br>
+                    <input type="password" class="form-control input-lg" id="password" placeholder="password"
+                        autocomplete="off" required> <br>
+
+                <p id="loginErrorMessage" style="display: none; color: red;"></p>
+                    <div class="text-center">
+                        <button type="button" onclick="authenticateQuizUser()"
+                            class="btn btn-primary btn-lg" id="loginBtn" disabled>Login</button>
+                    </div>
+                </div>
+                <!-- this is hidden. It becomes visible when users credentials are authenticated -->
+                <div id="usersnameForQuiz">
+                    <input type="text"  class="form-control input-lg"  autocomplete="off" id="usersName" placeholder="Please enter a name"> <br><br>
+                    <div class="text-center"><button type="button" class="btn btn-primary" id="startQuizBtn" onclick="setUpQuiz()" disabled>Set up
+                            Quiz</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
