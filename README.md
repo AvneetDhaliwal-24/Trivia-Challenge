@@ -1,5 +1,5 @@
-# JavaScript Quiz App
-## Quiz App
+# Trivia Challenge
+## Interactive Quiz Game
 This is a JavaScript quiz application that allows users to take a quiz based on their selected preferences. Users can choose the number of questions, quiz category, and difficulty level before starting the quiz. It fetches quiz questions from an API and allows users to answer them, providing feedback on their answers and displaying their score at the end of the quiz. The application includes authentication to ensure that only authorized users can access the quiz.
 
 ### Features
