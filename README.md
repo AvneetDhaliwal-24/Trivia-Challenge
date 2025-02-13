@@ -35,4 +35,4 @@ The quiz questions are fetched from the Open Trivia Database API (https://opentd
 - See your score at the end of the quiz along with the option to play another quiz.
 
 ### Author
-Avneet Kaur Dhaliwal
+Avneet Dhaliwal
