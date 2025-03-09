@@ -38,8 +38,8 @@ const fetchData = () => {
         console.log("Too many api requests");
         setTimeout(() => {
             location.href = "setUpQuiz.html";
-          }, 3000);
-      });;
+        }, 3000);
+    });;
 }
 
 // sets the user info
@@ -64,7 +64,7 @@ Array.from(allOptions).forEach((item) => {
 // loads the question on the page
 const loadQuestion = (data) => {
     // sets the question
-    document.getElementById("question").innerHTML = (count + 1) + ". " + data.question;
+    document.getElementById("question").innerHTML = (count) + ". " + data.question;
 
     //stores all the options available for the question
     let options = [];
@@ -87,7 +87,6 @@ const loadQuestion = (data) => {
 
     // calls updateQuestionCount and updateProgressBar
     updateQuestionCount();
-    updateProgressBar();
 };
 
 // checks the answer
@@ -118,17 +117,19 @@ const checkAnswer = () => {
     // when on last question it enables end quiz button and disables next button
     if (count === (quizQAs.length - 1)) {
         document.getElementById("nextBtn").style.display = "none";
-        document.getElementById("endQuizBtn").style.display ="inline-block";
+        document.getElementById("endQuizBtn").style.display = "inline-block";
     }
     // increases the count by 1
     count++;
+    updateProgressBar();
 }
 
 
 // updates progress bar 
 const updateProgressBar = () => {
     // increases the width of span tag in the div tag so that the progress bar can show the progress in number of questions
-    document.getElementById("progressBar").style.width = progressBarWidthValue * (count + 1) + "%";
+    console.log(progressBarWidthValue * (count) + "%");
+    document.getElementById("progressBar").style.width = progressBarWidthValue * (count) + "%";
 
 }
 
@@ -166,6 +167,12 @@ const nextQuestion = () => {
     if (count <= (quizQAs.length - 1)) {
         loadQuestion(quizQAs[count]);
     }
+
+    // if (count > 0) {
+
+    //     updateProgressBar();
+    // }
+
     // disables the next button
     document.getElementById("nextBtn").disabled = true;
 }
@@ -182,7 +189,7 @@ const resetStyle = () => {
             document.getElementById(correctAnsBtn).classList.remove("correctAnswer");
         }
         // checks if the user selected the correct answer
-         else (selectedAns.classList.contains("correctAnswer"))
+        else (selectedAns.classList.contains("correctAnswer"))
         {
             // removes the correct answer class from the user selected button
             selectedAns.classList.remove("correctAnswer");
