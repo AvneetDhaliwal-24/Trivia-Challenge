@@ -21,6 +21,7 @@ This is a JavaScript quiz application that allows users to take a quiz based on 
 ### Setup Instructions
 - Clone the repository to your local machine.
 - Open the index.html file in your web browser to start the quiz.
+- dummy data to play the quiz: username = username and password = 1234
 
 ### API Used
 The quiz questions are fetched from the Open Trivia Database API (https://opentdb.com/api.php).
