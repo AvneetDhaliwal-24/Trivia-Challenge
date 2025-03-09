@@ -64,7 +64,7 @@ Array.from(allOptions).forEach((item) => {
 // loads the question on the page
 const loadQuestion = (data) => {
     // sets the question
-    document.getElementById("question").innerHTML = (count) + ". " + data.question;
+    document.getElementById("question").innerHTML = (count + 1) + ". " + data.question;
 
     //stores all the options available for the question
     let options = [];
